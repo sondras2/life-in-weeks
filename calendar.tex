@@ -63,16 +63,6 @@
      % partial week
      \setcounter{firstweek}{\the\numexpr8-\value{datedayname}\relax}
      \node[rotate=180,partial=\thefirstweek] at (5mm,-5mm*\age) {};
-  \else
-     % full week (starting at monday)
-     \setcounter{firstweek}{7}
-     \node[week] at (5mm,-5mm*\age) {};
-  \fi
-
-  % skip to the day before next birthday
-  \addtocounter{dateyear}{1}
-  \setdatenumber{\thedateyear}{\thebirthdaymonth}{\thebirthdayday}
-  \prevdate
 
   % number of days in this year of life (358...365)
   \setcounter{daysleft}{\thedatenumber}
